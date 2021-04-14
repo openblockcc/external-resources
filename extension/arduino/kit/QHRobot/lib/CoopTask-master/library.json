@@ -1,0 +1,15 @@
+{
+    "name": "CoopTask",
+    "version": "3.0.1",
+    "keywords": [
+      "multitasking", "timing"
+    ],
+    "description": "Portable C++ library for cooperative multitasking like Arduino Scheduler on ESP8266/ESP32, AVR, Linux, Windows",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/dok-net/CoopTask"
+    },
+    "frameworks": "arduino",
+    "platforms": "*"
+}
