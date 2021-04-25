@@ -1,0 +1,4 @@
+{
+    "release": "https://api.github.com/repos/openblockcc/resource/releases/latest",
+    "download": "https://nodeload.github.com/openblockcc/resource/zip/"
+}
