@@ -5,6 +5,7 @@ module.exports = [
     'arduinoMini',
     'arduinoLeonardo',
     'arduinoMega2560',
+    'arduinoEsp32',
     'microbit',
     'maixduino',
     // Third party
