@@ -7,6 +7,7 @@ module.exports = [
     'arduinoMega2560',
     'arduinoEsp32',
     'microbit',
+    'microbitV2',
     'maixduino',
     // Third party
     'ironKit_arduinoUno',
