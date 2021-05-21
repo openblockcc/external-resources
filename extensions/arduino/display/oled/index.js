@@ -4,7 +4,6 @@ const oled = formatMessage => ({
     version: '0.0.1',
     supportDevice: ['arduinoUno'],
     author: 'Test',
-    type: 'arduino',
     iconURL: `asset/OLED.png`,
     description: formatMessage({
         id: 'oled.description',

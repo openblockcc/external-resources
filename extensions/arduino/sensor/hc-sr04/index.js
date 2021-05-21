@@ -2,8 +2,7 @@ const hcSr04 = formatMessage => ({
     name: 'HC_SR04',
     extensionId: 'hc_sr04',
     version: '1.0.0',
-    type: 'arduino',
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560'],
+    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560', 'arduinoEsp32'],
     author: 'Liang',
     iconURL: `asset/HC-SR04.png`,
     description: formatMessage({

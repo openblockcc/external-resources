@@ -1746,6 +1746,37 @@ const QH_smgxs=[["auto", "auto"],["1", "1"],["2", "2"],["3", "3"]];
             });
         }
     };
+     //语音模块
+    Blockly.Blocks.QH_VoicePlayValue = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.QH_VoicePlayValue,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_SPEECH_ICO,
+                        width: 30,
+                        height: 30
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN',
+                        options: UNO_PIN
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'addr'
+                    }
+                ],
+                "tooltip": "适用于QH-ASR语音合成模块，用于播放数字(整数、浮点)变量和常量，播放时会产生阻塞。",
+                colour: QH_SPEECH_color1,
+                extensions: ['shape_statement']
+            });
+        }
+    };
     //语音识别发送数据
     Blockly.Blocks.QH_ASR_SendData = {
         init: function () {

@@ -12,6 +12,7 @@ module.exports = {
         'servo.name': 'Servo',
         'servo.description': 'Classic servo support for microbit.',
         'QDPRobot.description': 'QDP robot.',
+        'QDPRobot_C02.description': 'QDP robot C02.',
         'ps2.name': 'PS2 remote control',
         'ps2.description': 'PS2 wireless remote controller with 4 signal lines.'
     },
@@ -28,6 +29,7 @@ module.exports = {
         'servo.name': '舵机',
         'servo.description': '让Microbit可以控制普通的舵机.',
         'QDPRobot.description': '齐护机器人.',
+        'QDPRobot_C02.description': '齐护机器人 C02.',
         'ps2.name': 'PS2无线遥控器',
         'ps2.description': '使用4根信号线的PS2无线遥控器'
     }

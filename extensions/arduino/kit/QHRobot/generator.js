@@ -501,6 +501,14 @@ function addGenerator (Blockly) {
         var code = 'VoiceSendData('+addr+','+PIN+');\ndelay('+delayTime+');\n'
         return code;
     };
+    //语音模块读值
+    Blockly.Arduino.QH_VoicePlayValue = function() {
+        Blockly.Arduino.definitions_['include_QDPVoice'] = '#include <QDPVoice.h>';
+        var PIN = this.getFieldValue('PIN');
+        var addr = Blockly.Arduino.valueToCode(this, 'addr',Blockly.Arduino.ORDER_ATOMIC) || '0';
+        var code = 'VoicePlayValue('+addr+','+PIN+');\n'
+        return code;
+    };
      //语音识别发送数据
     Blockly.Arduino.QH_ASR_SendData = function() {
         var dropdown_pin = this.getFieldValue('pinn');
@@ -10024,8 +10032,8 @@ ${loopBranch}}`;
         let name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
         name = name.replace(/\"/g,'');
 
-        let code = 'constrain('+name+', '+min+', '+max+');\n';
-        return code;
+        let code = 'constrain('+name+', '+min+', '+max+')';
+        return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
     //映射
     Blockly.Arduino.QH_map = function (block) {
@@ -10036,8 +10044,8 @@ ${loopBranch}}`;
         let name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
         name = name.replace(/\"/g,'');
 
-        let code = 'map('+name+', '+min1+', '+max1+', '+min2+', '+max2+');\n';
-        return code;
+        let code = 'map('+name+', '+min1+', '+max1+', '+min2+', '+max2+')';
+        return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
 
     return Blockly;

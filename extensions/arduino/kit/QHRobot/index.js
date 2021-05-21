@@ -2,8 +2,7 @@ const QDPRobot = formatMessage => ({
     name: 'QDP',
     extensionId: 'QDPRobot',
     version: '1.0.0',
-    type: 'arduino',
-    supportDevice: [], // Hide kit extension in library
+    supportDevice: [],
     author: 'QDProbot',
     iconURL: `asset/QH.png`,
     description: formatMessage({
@@ -12,13 +11,13 @@ const QDPRobot = formatMessage => ({
         description: 'Description of QDP robot'
     }),
     featured: true,
-    blocks: 'blocks.js',
-    generator: 'generator.js',
-    toolbox: 'toolbox.js',
-    msg: 'msg.js',
+    blocks: `blocks.js`,
+    generator: `generator.js`,
+    toolbox: `toolbox.js`,
+    msg: `msg.js`,
     library: 'lib',
-    tags: ['kit'],
-    helpLink: 'http://www.qdprobot.com/'
+    tags: ['kit','actuator', 'sensor', 'display', 'communication', 'other'],
+    helpLink: 'https://qdprobot.taobao.com'
 });
 
 module.exports = QDPRobot;

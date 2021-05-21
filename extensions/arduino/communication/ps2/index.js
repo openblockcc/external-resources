@@ -6,8 +6,7 @@ const ps2 = formatMessage => ({
     }),
     extensionId: 'ps2',
     version: '1.0.0',
-    type: 'arduino',
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560'],
+    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560', 'arduinoEsp32'],
     author: 'ArthurZheng',
     iconURL: `asset/ps2.png`,
     description: formatMessage({
