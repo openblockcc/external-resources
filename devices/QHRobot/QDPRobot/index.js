@@ -1,6 +1,6 @@
 const QDPRobot = formatMessage => ({
     name: 'QDP Robot',
-    deviceId: 'QDPRobot_arduinoUno',
+    deviceId: 'QDPRobot_arduinoUnoUltra',
     manufactor: 'QDP Robot',
     leanMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobot.png',

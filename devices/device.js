@@ -11,6 +11,6 @@ module.exports = [
     'maixduino',
     // Third party
     'ironKit_arduinoUno',
-    'QDPRobot_arduinoUno',
+    'QDPRobot_arduinoUnoUltra',
     'QDPRobotC02_arduinoEsp32'
 ];
