@@ -6,9 +6,11 @@ module.exports = [
     'arduinoLeonardo',
     'arduinoMega2560',
     'arduinoEsp32',
+    'arduinoEsp8266',
     'microbit',
     'microbitV2',
     'maixduino',
+    'makeymakey',
     // Third party
     'ironKit_arduinoUno',
     'QDPRobot_arduinoUnoUltra',
