@@ -9,7 +9,6 @@ module.exports = [
     'arduinoEsp8266',
     'microbit',
     'microbitV2',
-    'maixduino',
     'makeyMakey',
     // Third party
     'ironKit_arduinoUno',
