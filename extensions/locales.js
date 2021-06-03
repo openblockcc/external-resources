@@ -14,7 +14,8 @@ module.exports = {
         'QDPRobot.description': 'QDP robot.',
         'QDPRobot_C02.description': 'QDP robot C02.',
         'ps2.name': 'PS2 remote control',
-        'ps2.description': 'PS2 wireless remote controller with 4 signal lines.'
+        'ps2.description': 'PS2 wireless remote controller with 4 signal lines.',
+        'singleLed.description': 'LED module.'
     },
     'zh-cn': {
         'l298n.description': 'L298N 电机驱动模块.',
@@ -31,6 +32,7 @@ module.exports = {
         'QDPRobot.description': '齐护机器人.',
         'QDPRobot_C02.description': '齐护机器人 C02.',
         'ps2.name': 'PS2无线遥控器',
-        'ps2.description': '使用4根信号线的PS2无线遥控器'
+        'ps2.description': '使用4根信号线的PS2无线遥控器',
+        'singleLed.description': 'LED 灯模块'
     }
 };
