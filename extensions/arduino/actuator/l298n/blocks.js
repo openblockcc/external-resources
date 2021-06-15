@@ -3,6 +3,19 @@
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
     const color = '#FF6F00';
+    const secondaryColour = '#FF4F00';
+
+    const digitalPins = Blockly.getMainWorkspace().getFlyout()
+        .getFlyoutItems()
+        .find(block => block.type === 'arduino_pin_setDigitalOutput')
+        .getField('PIN')
+        .getOptions();
+
+    const pwmPins = Blockly.getMainWorkspace().getFlyout()
+        .getFlyoutItems()
+        .find(block => block.type === 'arduino_pin_setPwmOutput')
+        .getField('PIN')
+        .getOptions();
 
     Blockly.Blocks.l298n_init = {
         init: function () {
@@ -11,22 +24,26 @@ function addBlocks (Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'ch'
+                        name: 'CH'
                     },
                     {
-                        type: 'input_value',
-                        name: 'in1'
+                        type: 'field_dropdown',
+                        name: 'IN1',
+                        options: digitalPins
                     },
                     {
-                        type: 'input_value',
-                        name: 'in2'
+                        type: 'field_dropdown',
+                        name: 'IN2',
+                        options: digitalPins
                     },
                     {
-                        type: 'input_value',
-                        name: 'en'
+                        type: 'field_dropdown',
+                        name: 'EN',
+                        options: pwmPins
                     }
                 ],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
         }
@@ -39,21 +56,22 @@ function addBlocks (Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'ch'
+                        name: 'CH'
                     },
                     {
                         type: 'field_dropdown',
-                        name: 'dir',
+                        name: 'DIR',
                         options: [
-                            [Blockly.Msg.L298N_FORWARD, 'true'],
-                            [Blockly.Msg.L298N_BACK, 'false']]
+                            [Blockly.Msg.L298N_FORWARD, 'L298N_FORWARD'],
+                            [Blockly.Msg.L298N_BACK, 'L298N_BACKWARD']]
                     },
                     {
                         type: 'input_value',
-                        name: 'speed'
+                        name: 'SPEED'
                     }
                 ],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
         }
@@ -66,10 +84,11 @@ function addBlocks (Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'ch'
+                        name: 'CH'
                     }
                 ],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
         }

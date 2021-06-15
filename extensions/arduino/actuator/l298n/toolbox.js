@@ -3,43 +3,31 @@
 /* eslint-disable require-jsdoc */
 function addToolbox () {
     return `
-<category name="%{BKY_L298N_CATEGORY}" id="L298N_CATEGORY" colour="#FF6F00" secondaryColour="#FF6F00" iconURI="">
+<category name="%{BKY_L298N_CATEGORY}" id="L298N_CATEGORY" colour="#FF6F00" secondaryColour="#FF4F00">
     <block type="l298n_init" id="l298n_init">
-        <value name="ch">
+        <value name="CH">
             <shadow type="math_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
-        <value name="in1">
-            <shadow type="math_number">
-                <field name="NUM">2</field>
-            </shadow>
-        </value>
-        <value name="in2">
-            <shadow type="math_number">
-                <field name="NUM">3</field>
-            </shadow>
-        </value>
-        <value name="en">
-            <shadow type="math_number">
-                <field name="NUM">4</field>
-            </shadow>
-        </value>
+        <field name="IN1">2</field>
+        <field name="IN2">3</field>
+        <field name="EN">5</field>
     </block>
     <block type="l298n_run" id="l298n_run">
-        <value name="ch">
+        <value name="CH">
             <shadow type="math_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
-        <value name="speed">
+        <value name="SPEED">
             <shadow type="math_number">
                 <field name="NUM">255</field>
             </shadow>
         </value>
     </block>
     <block type="l298n_stop" id="l298n_stop">
-        <value name="ch">
+        <value name="CH">
             <shadow type="math_number">
                 <field name="NUM">0</field>
             </shadow>
