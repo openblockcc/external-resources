@@ -79,6 +79,31 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.rgbLedStrip_color = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.RGBLEDSTRIP_COLOR,
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'R'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'G'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'B'
+                    }
+                ],
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['output_string']
+            });
+        }
+    };
+
     Blockly.Blocks.rgbLedStrip_setBrightness = {
         init: function () {
             this.jsonInit({

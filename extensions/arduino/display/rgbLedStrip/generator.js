@@ -28,6 +28,14 @@ function addGenerator (Blockly) {
         return `ledStrip.fill(${colour}, ${first}, ${count});\n`;
     };
 
+    Blockly.Arduino.rgbLedStrip_color = function (block) {
+        const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
+        const g = Blockly.Arduino.valueToCode(block, 'G', Blockly.Arduino.ORDER_ATOMIC);
+        const b = Blockly.Arduino.valueToCode(block, 'B', Blockly.Arduino.ORDER_ATOMIC);
+
+        return [`ledStrip.Color(${r}, ${g}, ${b})`, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
     Blockly.Arduino.rgbLedStrip_setBrightness = function (block) {
         const brightness = Blockly.Arduino.valueToCode(block, 'BRT', Blockly.Arduino.ORDER_ATOMIC);
 

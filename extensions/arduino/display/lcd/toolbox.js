@@ -9,12 +9,12 @@ function addToolbox () {
     </block>
     <block type="lcd_setCursorPosition" id="lcd_setCursorPosition">
         <value name="X">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="Y">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">0</field>
             </shadow>
         </value>

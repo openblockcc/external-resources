@@ -3,6 +3,7 @@
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
     const color = '#00D7B0';
+    const secondaryColour = '#00BE96';
 
     Blockly.Blocks.softwareSerial_begin = {
         init: function () {
@@ -10,16 +11,16 @@ function addBlocks (Blockly) {
                 message0: Blockly.Msg.SOFTWARESERIAL_BEGIN,
                 args0: [{
                     type: 'input_value',
-                    name: 'no'
+                    name: 'NO'
                 }, {
                     type: 'input_value',
-                    name: 'rx'
+                    name: 'RX'
                 }, {
                     type: 'input_value',
-                    name: 'tx'
+                    name: 'TX'
                 }, {
                     type: 'field_dropdown',
-                    name: 'baudrate',
+                    name: 'BAUD',
                     options: [
                         ['4800', '4800'],
                         ['9600', '9600'],
@@ -29,6 +30,7 @@ function addBlocks (Blockly) {
                         ['115200', '115200']]
                 }],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
         }
@@ -40,12 +42,13 @@ function addBlocks (Blockly) {
                 message0: Blockly.Msg.SOFTWARESERIAL_PRINT,
                 args0: [{
                     type: 'input_value',
-                    name: 'no'
+                    name: 'NO'
                 }, {
                     type: 'input_value',
-                    name: 'data'
+                    name: 'DATA'
                 }],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
             });
         }
@@ -57,9 +60,10 @@ function addBlocks (Blockly) {
                 message0: Blockly.Msg.SOFTWARESERIAL_AVAILABLE,
                 args0: [{
                     type: 'input_value',
-                    name: 'no'
+                    name: 'NO'
                 }],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['output_number']
             });
         }
@@ -71,9 +75,10 @@ function addBlocks (Blockly) {
                 message0: Blockly.Msg.SOFTWARESERIAL_READABYTE,
                 args0: [{
                     type: 'input_value',
-                    name: 'no'
+                    name: 'NO'
                 }],
                 colour: color,
+                secondaryColour: secondaryColour,
                 extensions: ['output_string']
             });
         }

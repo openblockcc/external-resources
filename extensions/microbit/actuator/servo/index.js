@@ -7,7 +7,7 @@ const servo = formatMessage => ({
     extensionId: 'servo',
     version: '1.0.0',
     type: 'microbit',
-    supportDevice: ['microbit'],
+    supportDevice: ['microbit', 'microbitV2'],
     author: 'ArthurZheng',
     iconURL: `asset/servo.png`,
     description: formatMessage({

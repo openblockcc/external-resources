@@ -1,24 +1,25 @@
-const softwareSerial = formatMessage => ({
+const cooperativeScheduler = formatMessage => ({
     name: formatMessage({
-        id: 'softwareSerial.name',
-        default: 'Software Serial'
+        id: 'cooperativeScheduler.name',
+        default: 'Cooperative Scheduler'
     }),
-    extensionId: 'softwareSerial',
+    extensionId: 'cooperativeScheduler',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560'],
     author: 'ArthurZheng',
-    iconURL: `asset/softwareSerial.png`,
+    iconURL: `asset/cooperativeScheduler.png`,
     description: formatMessage({
-        id: 'softwareSerial.description',
-        default: 'Allow serial communication on other digital pins of the Arduino.'
+        id: 'cooperativeScheduler.description',
+        default: 'Allow Arduino run multiple tasks.'
     }),
     featured: true,
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     msg: 'msg.js',
+    library: 'lib',
     tags: ['other'],
     helpLink: 'https://openblockcc.gitee.io/wiki/'
 });
 
-module.exports = softwareSerial;
+module.exports = cooperativeScheduler;
