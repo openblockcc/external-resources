@@ -12,7 +12,7 @@ function addToolbox () {
     </block>
     <block type="passiveBuzzer_setTempo" id="passiveBuzzer_setTempo">
         <value name="BPM">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">120</field>
             </shadow>
         </value>
