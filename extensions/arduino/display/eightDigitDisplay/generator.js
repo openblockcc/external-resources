@@ -27,7 +27,7 @@ function addGenerator (Blockly) {
     };
 
     Blockly.Arduino.eightDigitDisplay_brightnessNumber = function (block) {
-        const num = Blockly.Arduino.valueToCode(block, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+        const num = block.getFieldValue('NUM');
 
         return [`${num}`, Blockly.Arduino.ORDER_ATOMIC];
     };
