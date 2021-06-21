@@ -18,6 +18,21 @@ int QDPQF::HC(char text[],uint8_t order) {
   return 0;
 
 }
+
+int QDPQF::HC(String text,uint8_t order) {
+  int text_len = text.length() + 2;
+  _serial->write(0xFD);
+  _serial->write(text_len >> 8);
+  _serial->write(text_len);
+  _serial->write(0x01);
+  _serial->write(0x01);
+  _serial->print(text);
+  if(order)
+  QZWC();
+  return 0;
+
+}
+
 int QDPQF::HC(int num,uint8_t order) {
 char s[10]{0};//定义定符数组
 sprintf(s,"%d",num);//把字转换成字符放到数据里

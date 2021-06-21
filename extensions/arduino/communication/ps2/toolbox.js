@@ -3,28 +3,12 @@
 /* eslint-disable require-jsdoc */
 function addToolbox () {
     return `
-<category name="%{BKY_PS2_CATEGORY}" id="PS2_CATEGORY" colour="#FF3399" secondaryColour="#FF3399">
+<category name="%{BKY_PS2_CATEGORY}" id="PS2_CATEGORY" colour="#FF3399" secondaryColour="#C71585">
     <block type="ps2_init" id="ps2_init">
-        <value name="din">
-            <shadow type="math_number">
-                <field name="NUM">2</field>
-            </shadow>
-        </value>
-        <value name="dout">
-            <shadow type="math_number">
-                <field name="NUM">3</field>
-            </shadow>
-        </value>
-        <value name="cs">
-            <shadow type="math_number">
-                <field name="NUM">4</field>
-            </shadow>
-        </value>
-        <value name="clk">
-            <shadow type="math_number">
-                <field name="NUM">5</field>
-            </shadow>
-        </value>
+        <field name="DIN">2</field>
+        <field name="DOUT">3</field>
+        <field name="CS">4</field>
+        <field name="CLK">5</field>
     </block>
     <block type="ps2_readData" id="ps2_readData">
     </block>
@@ -32,8 +16,7 @@ function addToolbox () {
     </block>
     <block type="ps2_GetJoystick" id="ps2_GetJoystick">
     </block>
-</category>
-`;
+</category>`;
 }
 
 exports = addToolbox;

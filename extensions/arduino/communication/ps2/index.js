@@ -1,18 +1,17 @@
 const ps2 = formatMessage => ({
     name: formatMessage({
         id: 'ps2.name',
-        default: 'PS2 remote control',
-        description: 'Name of ps2'
+        default: 'PS2 Remote Control'
     }),
     extensionId: 'ps2',
     version: '1.0.0',
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560', 'arduinoEsp32'],
+    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
+        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'ArthurZheng',
     iconURL: `asset/ps2.png`,
     description: formatMessage({
         id: 'ps2.description',
-        default: 'PS2 wireless remote controller with 4 signal lines.',
-        description: 'Description of ps2'
+        default: 'PS2 wireless remote controller with 4 signal lines.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -21,7 +20,7 @@ const ps2 = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['communication'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/'
+    helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
 module.exports = ps2;

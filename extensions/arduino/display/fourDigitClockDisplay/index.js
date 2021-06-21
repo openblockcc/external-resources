@@ -20,7 +20,7 @@ const fourDigitClockDisplay = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['display'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/'
+    helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
 module.exports = fourDigitClockDisplay;

@@ -19,7 +19,7 @@ const cooperativeScheduler = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['other'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/'
+    helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
 module.exports = cooperativeScheduler;

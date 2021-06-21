@@ -104,35 +104,6 @@ function addGenerator (Blockly) {
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
 
-    Blockly.Arduino.ironKit_handleGestureInit = function () {
-        Blockly.Arduino.includes_.IRONKIT_HANDLEGESTUREINIT = '#include <Wire.h>\n#include "SparkFun_APDS9960.h"';
-        Blockly.Arduino.definitions_.IRONKIT_HANDLEGESTUREINIT = 'SparkFun_APDS9960 apds = SparkFun_APDS9960();';
-        Blockly.Arduino.setups_.IRONKIT_HANDLEGESTUREINIT = '  apds.init();\n  apds.enableGestureSensor(true);';
-
-        return '';
-    };
-
-    Blockly.Arduino.ironKit_handleGestureAvailable = function () {
-        const code = 'apds.isGestureAvailable()';
-
-        return [code, Blockly.Arduino.ORDER_ATOMIC];
-    };
-
-    Blockly.Arduino.ironKit_handleGestureReadData = function () {
-        const code = 'gestureStatus = apds.readGesture();\n';
-
-        return code;
-    };
-
-    Blockly.Arduino.ironKit_handleGestureStatus = function () {
-        Blockly.Arduino.definitions_.IRONKIT_HANDLEGESTURESTATUS = 'int gestureStatus;';
-
-        const status = this.getFieldValue('status');
-        const code = `gestureStatus == ${status}`;
-
-        return [code, Blockly.Arduino.ORDER_ATOMIC];
-    };
-
     return Blockly;
 }
 

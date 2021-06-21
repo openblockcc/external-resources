@@ -4,8 +4,8 @@
 
 typedef struct unicode_gb
 {
-   uint16_t unicode;
-   uint16_t gb;
+   unsigned short unicode;
+   unsigned short gb;
 } UNICODE_GB;
 
 /*
@@ -6781,7 +6781,7 @@ UNICODE_GB code_table[] =
 	{	0xE814,	0xD7FE	}	
 };
 */
-static UNICODE_GB code_table[] = {
+UNICODE_GB code_table[] = {
   {0x00A4, 0xA1E8},
   {0x00A7, 0xA1EC},
   {0x00A8, 0xA1A7},
@@ -14229,7 +14229,7 @@ static UNICODE_GB code_table[] = {
   {0xFFE5, 0xA3A4}
 };
 
-QDP_text_code Transform;
+// QDP_text_code Transform;
 
 int QDP_text_code::GetUtf8ByteNumForWord(unsigned char firstCh)
 {
@@ -14267,7 +14267,7 @@ unsigned short int QDP_text_code::SearchCodeTable(unsigned short int unicodeKey)
         }
     }
     return 0;
-}
+};
 /*
 void QDP_text_code::Utf8ToGb2312(const unsigned char* utf8, int len,unsigned short int* gbArray)
 {
@@ -14423,4 +14423,28 @@ void QDP_text_code::Utf8ToGb2312(const unsigned char* utf8, int len,uint8_t* gbA
 		}
    }
    //return gbKey;
-} 
+};
+
+String QDP_text_code::transform(String input_data)
+{
+  int input_num = input_data.length();
+  int output_num = 0;
+  unsigned char str[input_num];
+  byte select = 0;
+  for(int x = 0;x < input_num;x++)
+  {
+    str[x] = input_data.charAt(x);
+    select = GetUtf8ByteNumForWord(str[x]);
+    if(select == 0)
+      output_num++;
+    else if(select >= 2)
+      output_num+=2;
+  }
+  uint8_t gbArray[output_num];
+  Utf8ToGb2312(str,input_num,gbArray);
+  //myHardwareSerial1.write(gbArray,sizeof(gbArray));
+  String result;
+ for(int x = 0;x < output_num;x++)
+ 	result += (char)gbArray[x];
+  return result;
+};

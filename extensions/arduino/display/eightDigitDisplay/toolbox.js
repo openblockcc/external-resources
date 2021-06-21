@@ -16,7 +16,7 @@ function addToolbox () {
             </shadow>
         </value>
         <value name="DECIMAL">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">2</field>
             </shadow>
         </value>

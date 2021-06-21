@@ -17,7 +17,7 @@ const apds9960 = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['sensor'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/'
+    helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
 module.exports = apds9960;

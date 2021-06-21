@@ -48,14 +48,6 @@ function addToolbox () {
     </block>
     <block type="ironKit_rgbUltrasonicReadDistance" id="ironKit_rgbUltrasonicReadDistance">
     </block>
-    <block type="ironKit_handleGestureInit" id="ironKit_handleGestureInit">
-    </block>
-    <block type="ironKit_handleGestureAvailable" id="ironKit_handleGestureAvailable">
-    </block>
-    <block type="ironKit_handleGestureReadData" id="ironKit_handleGestureReadData">
-    </block>
-    <block type="ironKit_handleGestureStatus" id="ironKit_handleGestureStatus">
-    </block>
 </category>
 `;
 }

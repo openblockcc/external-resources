@@ -4,7 +4,7 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         PS2_CATEGORY: 'PS2',
-        PS2_INIT: 'set ps2 receiver pin din %1 dout %2 cs %3 clk %4',
+        PS2_INIT: 'init ps2 receiver pin DIN %1 DOUT %2 CS %3 CLK %4',
         PS2_READDATA: 'read PS2 receiver data',
         PS2_GETBUTTON: 'PS2 %1 button is pressed?',
         PS2_UP: 'up',
@@ -21,7 +21,7 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         PS2_CATEGORY: 'PS2',
-        PS2_INIT: '设置 ps2 接收器引脚 din %1 dout %2 cs %3 clk %4',
+        PS2_INIT: '初始化 ps2 接收器引脚 DIN %1 DOUT %2 CS %3 CLK %4',
         PS2_READDATA: '读取 PS2 接收器数据',
         PS2_GETBUTTON: 'PS2 %1 按键被按下?',
         PS2_UP: '上',

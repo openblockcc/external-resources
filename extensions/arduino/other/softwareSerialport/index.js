@@ -18,7 +18,7 @@ const softwareSerial = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     tags: ['other'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/'
+    helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
 module.exports = softwareSerial;

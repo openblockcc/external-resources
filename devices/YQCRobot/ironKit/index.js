@@ -21,8 +21,8 @@ const ironKit = formatMessage => ({
     connectionSmallIconURL: 'asset/ironKit-small.svg',
     programMode: ['realtime', 'upload'],
     programLanguage: ['block', 'cpp'],
-    tags: ['kit'],
-    deviceExtensions: ['ironKit'],
+    tags: ['arduino', 'kit'],
+    deviceExtensions: ['ironKit', 'apds9960'],
     deviceExtensionsCompatible: 'arduinoUno',
     helpLink: 'https://www.sxyiqichuang.com/'
 });

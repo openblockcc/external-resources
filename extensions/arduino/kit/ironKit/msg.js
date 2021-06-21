@@ -45,17 +45,7 @@ function addMsg (Blockly) {
         IRONKIT_BREATHING: 'breathing',
         IRONKIT_ROTATE: 'rotate',
         IRONKIT_FLASH: 'flash',
-        IRONKIT_RGBULTRASONICREADDISTANCE: 'rgb ultrasonic read distance',
-        IRONKIT_HANDLEGESTUREINIT: 'handle gesture i2c init',
-        IRONKIT_HANDLEGESTUREAVAILABLE: 'handle gesture get available handle?',
-        IRONKIT_HANDLEGESTUREREADDATA: 'handle gesture read data',
-        IRONKIT_HANDLEGESTURESTATUS: 'handle gesture get handle %1?',
-        IRONKIT_GESTUREUP: 'up',
-        IRONKIT_GESTUREDOWN: 'dowm',
-        IRONKIT_GESTURELEFT: 'left',
-        IRONKIT_GESTURERIGHT: 'right',
-        IRONKIT_GESTURENEAR: 'near',
-        IRONKIT_GESTUREFAR: 'far'
+        IRONKIT_RGBULTRASONICREADDISTANCE: 'rgb ultrasonic read distance'
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         IRON_KIT_CATEGORY: '工程车套件',
@@ -100,17 +90,7 @@ function addMsg (Blockly) {
         IRONKIT_BREATHING: '呼吸',
         IRONKIT_ROTATE: '旋转',
         IRONKIT_FLASH: '闪烁',
-        IRONKIT_RGBULTRASONICREADDISTANCE: 'RGB超声波传感器读取距离',
-        IRONKIT_HANDLEGESTUREINIT: '手势传感器I2C初始化',
-        IRONKIT_HANDLEGESTUREAVAILABLE: '手势传感器获取到手势?',
-        IRONKIT_HANDLEGESTUREREADDATA: '手势传感器获取数据',
-        IRONKIT_HANDLEGESTURESTATUS: '手势传感器探测到手势 %1?',
-        IRONKIT_GESTUREUP: '向上',
-        IRONKIT_GESTUREDOWN: '向下',
-        IRONKIT_GESTURELEFT: '向左',
-        IRONKIT_GESTURERIGHT: '向右',
-        IRONKIT_GESTURENEAR: '接近',
-        IRONKIT_GESTUREFAR: '远离'
+        IRONKIT_RGBULTRASONICREADDISTANCE: 'RGB超声波传感器读取距离'
     });
     return Blockly;
 }

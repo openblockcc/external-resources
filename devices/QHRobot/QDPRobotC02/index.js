@@ -24,7 +24,7 @@ const QDPRobotC02 = formatMessage => ({
     connectionSmallIconURL: 'asset/QDPRobotC02-small.svg',
     programMode: ['upload'],
     programLanguage: ['block', 'cpp'],
-    tags: ['kit'],
+    tags: ['microbit', 'kit'],
     deviceExtensions: ['QDPRobotC02'],
     deviceExtensionsCompatible: 'arduinoEsp32',
     helpLink: 'http://www.qdprobot.com/'

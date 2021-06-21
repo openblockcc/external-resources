@@ -10,6 +10,7 @@ class QDPQF {
   public:
     bool begin(Stream& stream);
     int HC(char text[],uint8_t order = 1);
+    int HC(String text,uint8_t order = 1);
     int HC(int num,uint8_t order = 1);
     int HC(float fnum,uint8_t order = 1);
     int HC(char data[],int len,uint8_t order);

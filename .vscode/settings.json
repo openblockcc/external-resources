@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "SConstruct": "python",
+        "*.s2e": "jsonc",
+        "*.jsx": "javascriptreact",
+        "array": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "iosfwd": "cpp",
+        "regex": "cpp",
+        "xlocale": "cpp"
+    }
+}

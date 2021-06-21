@@ -305,60 +305,6 @@ function addBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.ironKit_handleGestureInit = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.IRONKIT_HANDLEGESTUREINIT,
-                colour: color,
-                extensions: ['output_number']
-            });
-        }
-    };
-
-    Blockly.Blocks.ironKit_handleGestureAvailable = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.IRONKIT_HANDLEGESTUREAVAILABLE,
-                colour: color,
-                extensions: ['output_boolean']
-            });
-        }
-    };
-
-    Blockly.Blocks.ironKit_handleGestureReadData = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.IRONKIT_HANDLEGESTUREREADDATA,
-                colour: color,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.ironKit_handleGestureStatus = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.IRONKIT_HANDLEGESTURESTATUS,
-                args0: [
-                    {
-                        type: 'field_dropdown',
-                        name: 'status',
-                        options: [
-                            [Blockly.Msg.IRONKIT_GESTUREUP, 'DIR_UP'],
-                            [Blockly.Msg.IRONKIT_GESTUREDOWN, 'DIR_DOWN'],
-                            [Blockly.Msg.IRONKIT_GESTURELEFT, 'DIR_LEFT'],
-                            [Blockly.Msg.IRONKIT_GESTURERIGHT, 'DIR_RIGHT'],
-                            [Blockly.Msg.IRONKIT_GESTURENEAR, 'DIR_NEAR'],
-                            [Blockly.Msg.IRONKIT_GESTUREFAR, 'DIR_FAR']
-                        ]
-                    }
-                ],
-                colour: color,
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
     return Blockly;
 }
 
