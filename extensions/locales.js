@@ -4,6 +4,8 @@ module.exports = {
         'passiveBuzzer.name': 'Passive Buzzer',
         'passiveBuzzer.description': 'Unlike the active buzzer, the passive buzzer can be used to make different ' +
             'tones of sound and play some ringtones.',
+        'irRemoteReceiver.name': 'IR Remote Receiver',
+        'irRemoteReceiver.description': 'Receiving and decoding data in infrared carrier.',
         'nrf24l01.description': '2.4G RF transceiver module.',
         'ps2.name': 'PS2 Remote Control',
         'ps2.description': 'PS2 wireless remote controller with 4 signal lines.',
@@ -37,6 +39,8 @@ module.exports = {
         'l298n.description': '常见的高功率双路电机驱动模块。',
         'passiveBuzzer.name': '无源蜂鸣器',
         'passiveBuzzer.description': '不同于有源蜂鸣器，无源蜂鸣器可以用来播放不同音调的声音和播放铃声。',
+        'irRemoteReceiver.name': '红外遥控接收器',
+        'irRemoteReceiver.description': '接收并解码红外载波中的数据。',
         'nrf24l01.description': '2.4G 无线射频传输模块。',
         'ps2.name': 'PS2 无线遥控器',
         'ps2.description': '使用4根信号线的 PS2 无线遥控器',
