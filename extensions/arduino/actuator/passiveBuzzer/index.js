@@ -11,7 +11,8 @@ const passiveBuzzer = formatMessage => ({
     iconURL: `asset/passiveBuzzer.png`,
     description: formatMessage({
         id: 'passiveBuzzer.description',
-        default: 'Unlike the active buzzer, the passive buzzer can be used to make different tones of sound and play some ringtones.'
+        default: 'Unlike the active buzzer, the passive buzzer can be used' +
+            ' to make different tones of sound and play some ringtones.'
     }),
     featured: true,
     blocks: 'blocks.js',

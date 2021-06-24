@@ -9,6 +9,11 @@
         "xutility": "cpp",
         "iosfwd": "cpp",
         "regex": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp",
+        "istream": "cpp"
     }
 }

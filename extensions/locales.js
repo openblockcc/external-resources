@@ -1,5 +1,8 @@
 module.exports = {
     'en': {
+        'chineseTTS.name': 'Chinese TTS',
+        'chineseTTS.description': 'Text to speech module based on SYN6288, ' +
+            'support Chinese and English letters and numbers.',
         'l298n.description': 'Common high power dual motor drive module.',
         'passiveBuzzer.name': 'Passive Buzzer',
         'passiveBuzzer.description': 'Unlike the active buzzer, the passive buzzer can be used to make different ' +
@@ -36,6 +39,8 @@ module.exports = {
         'servo.description': 'Classic servo support for microbit.'
     },
     'zh-cn': {
+        'chineseTTS.name': '中文 TTS',
+        'chineseTTS.description': '基于 SYN6288 的语音合成模块, 支持中文、英文字母以及数字。',
         'l298n.description': '常见的高功率双路电机驱动模块。',
         'passiveBuzzer.name': '无源蜂鸣器',
         'passiveBuzzer.description': '不同于有源蜂鸣器，无源蜂鸣器可以用来播放不同音调的声音和播放铃声。',
