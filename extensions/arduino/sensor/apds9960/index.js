@@ -3,7 +3,7 @@ const apds9960 = formatMessage => ({
     extensionId: 'apds9960',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'], // TODO 待测试
+        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'ArthurZheng',
     iconURL: `asset/apds9960.png`,
     description: formatMessage({
