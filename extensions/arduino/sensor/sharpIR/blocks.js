@@ -2,19 +2,19 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
-    const color = '#42CCFF';
-    const secondaryColour = '#00BFFF';
+    const color = '#9F0050';
+    const secondaryColour = '#820041';
 
     const digitalPins = Blockly.getMainWorkspace().getFlyout()
         .getFlyoutItems()
-        .find(block => block.type === 'arduino_pin_setDigitalOutput')
+        .find(block => block.type === 'arduino_pin_readAnalogPin')
         .getField('PIN')
         .getOptions();
 
-    Blockly.Blocks.dht_init = {
+    Blockly.Blocks.sharpIR_init = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.DHT_INIT,
+                message0: Blockly.Msg.SHARPIR_INIT,
                 args0: [
                     {
                         type: 'input_value',
@@ -29,9 +29,10 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'MODEL',
                         options: [
-                            ['dht11', '11'],
-                            ['dht21', '21'],
-                            ['dht22', '22']]
+                            ['GP2Y0A21YK0F', 'GP2Y0A21YK0F'],
+                            ['GP2Y0A02YK0F', 'GP2Y0A02YK0F'],
+                            ['GP2Y0A710K0F', 'GP2Y0A710K0F']
+                        ]
                     }
                 ],
                 colour: color,
@@ -41,39 +42,14 @@ function addBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.dht_readHumidity = {
+    Blockly.Blocks.sharpIR_readDistance = {
         init: function () {
             this.jsonInit({
-                message0: Blockly.Msg.DHT_READ_HUMIDITY,
+                message0: Blockly.Msg.SHARPIR_READDISTANCE,
                 args0: [
                     {
                         type: 'input_value',
                         name: 'NO'
-                    }
-                ],
-                colour: color,
-                secondaryColour: secondaryColour,
-                extensions: ['output_number']
-            });
-        }
-    };
-
-
-    Blockly.Blocks.dht_readTemperature = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.DHT_READ_TEMPERATURE,
-                args0: [
-                    {
-                        type: 'input_value',
-                        name: 'NO'
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'UNIT',
-                        options: [
-                            ['℃', 'false'],
-                            ['℉', 'true']]
                     }
                 ],
                 colour: color,

@@ -1,17 +1,17 @@
-const dht = formatMessage => ({
+const sharpIR = formatMessage => ({
     name: formatMessage({
-        id: 'dht.name',
-        default: 'DHT Sensor'
+        id: 'sharpIR.name',
+        default: 'Sharp IR Sensor'
     }),
-    extensionId: 'dht',
+    extensionId: 'sharpIR',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
+        'arduinoMega2560', 'arduinoEsp8266'],
     author: 'ArthurZheng',
-    iconURL: `asset/dht.png`,
+    iconURL: `asset/sharpIR.png`,
     description: formatMessage({
-        id: 'dht.description',
-        default: 'DHT Temperature and humidity sensor module.'
+        id: 'sharpIR.description',
+        default: 'Infrared distance sensor based on the principle of triangle ranging.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -23,4 +23,4 @@ const dht = formatMessage => ({
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
-module.exports = dht;
+module.exports = sharpIR;

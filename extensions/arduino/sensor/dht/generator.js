@@ -5,10 +5,10 @@ function addGenerator (Blockly) {
     Blockly.Arduino.dht_init = function (block) {
         const no = Blockly.Arduino.valueToCode(block, 'NO', Blockly.Arduino.ORDER_ATOMIC);
         const pin = block.getFieldValue('PIN');
-        const mode = this.getFieldValue('MODE');
+        const model = this.getFieldValue('MODEL');
 
         Blockly.Arduino.includes_.dht_init = `#include <DHT.h>`;
-        Blockly.Arduino.definitions_[`dht_init_${no}`] = `DHT dht_${no}(${pin}, ${mode});`;
+        Blockly.Arduino.definitions_[`dht_init_${no}`] = `DHT dht_${no}(${pin}, ${model});`;
         return '';
     };
 

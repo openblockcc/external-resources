@@ -1,17 +1,14 @@
-const dht = formatMessage => ({
-    name: formatMessage({
-        id: 'dht.name',
-        default: 'DHT Sensor'
-    }),
-    extensionId: 'dht',
+const tcs3200 = formatMessage => ({
+    name: 'TCS3200',
+    extensionId: 'tcs3200',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
+        'arduinoMega2560'],
     author: 'ArthurZheng',
-    iconURL: `asset/dht.png`,
+    iconURL: `asset/tcs3200.png`,
     description: formatMessage({
-        id: 'dht.description',
-        default: 'DHT Temperature and humidity sensor module.'
+        id: 'tcs3200.description',
+        default: 'Color sensor module based on TCS3200.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -23,4 +20,4 @@ const dht = formatMessage => ({
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
-module.exports = dht;
+module.exports = tcs3200;
