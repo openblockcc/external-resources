@@ -1,17 +1,17 @@
-const max30102 = formatMessage => ({
+const mpu6050 = formatMessage => ({
     name: formatMessage({
-        id: 'max30102.name',
-        default: 'MAX30102 Sensor'
+        id: 'mpu6050.name',
+        default: 'MPU6050 Sensor'
     }),
-    extensionId: 'max30102',
+    extensionId: 'mpu6050',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'ArthurZheng',
-    iconURL: `asset/max30102.png`,
+    iconURL: `asset/mpu6050.png`,
     description: formatMessage({
-        id: 'max30102.description',
-        default: 'Blood oxygen and heart rate detection module based on MAX30102.'
+        id: 'mpu6050.description',
+        default: '6-axis attitude sensor module based on MPU6050.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -23,4 +23,4 @@ const max30102 = formatMessage => ({
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
-module.exports = max30102;
+module.exports = mpu6050;

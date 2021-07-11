@@ -1,17 +1,18 @@
-const max30102 = formatMessage => ({
+const max6675 = formatMessage => ({
     name: formatMessage({
-        id: 'max30102.name',
-        default: 'MAX30102 Sensor'
+        id: 'max6675.name',
+        default: 'MAX6675 Module'
     }),
-    extensionId: 'max30102',
+    extensionId: 'max6675',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'ArthurZheng',
-    iconURL: `asset/max30102.png`,
+    iconURL: `asset/max6675.png`,
     description: formatMessage({
-        id: 'max30102.description',
-        default: 'Blood oxygen and heart rate detection module based on MAX30102.'
+        id: 'max6675.description',
+        default: 'K-type thermocouple temperature measurement module ' +
+            'based on MAX6675, the measurement range is 0 ~ 1024 ℃'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -23,4 +24,4 @@ const max30102 = formatMessage => ({
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
 
-module.exports = max30102;
+module.exports = max6675;
