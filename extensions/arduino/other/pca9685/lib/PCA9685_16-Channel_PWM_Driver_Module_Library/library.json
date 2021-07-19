@@ -1,0 +1,62 @@
+{
+    "name": "PCA9685-Arduino",
+    "version": "1.2.15",
+    "keywords": "PCA9685, pwm, i2c, controller, driver",
+    "description": "Library to control a PCA9685 16-channel PWM driver module from an Arduino board.",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "NachtRaveVL",
+            "email": "nachtravevl@gmail.com",
+            "url": "https://github.com/NachtRaveVL",
+            "maintainer": true
+        },
+        {
+            "name": "Vitska",
+            "url": "https://github.com/vitska"
+        },
+        {
+            "name": "Kasper Skårhøj",
+            "url": "https://github.com/kasperskaarhoj"
+        }
+    ],
+    "homepage": "https://github.com/NachtRaveVL/PCA9685-Arduino/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NachtRaveVL/PCA9685-Arduino.git"
+    },
+    "examples": [
+        {
+            "name": "SimpleExample",
+            "base": "examples/SimpleExample",
+            "files": ["SimpleExample.ino"]
+        },
+        {
+            "name": "BatchingExample",
+            "base": "examples/BatchingExample",
+            "files": ["BatchingExample.ino"]
+        },
+        {
+            "name": "MultiDeviceProxyExample",
+            "base": "examples/MultiDeviceProxyExample",
+            "files": ["MultiDeviceProxyExample.ino"]
+        },
+        {
+            "name": "ServoEvaluatorExample",
+            "base": "examples/ServoEvaluatorExample",
+            "files": ["ServoEvaluatorExample.ino"]
+        },
+        {
+            "name": "SoftwareI2CExample",
+            "base": "examples/SoftwareI2CExample",
+            "files": ["SoftwareI2CExample.ino"]
+        },
+        {
+            "name": "ModuleInfo",
+            "base": "examples/ModuleInfo",
+            "files": ["ModuleInfo.ino"]
+        }
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+}
