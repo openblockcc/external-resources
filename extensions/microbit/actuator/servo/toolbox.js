@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function addToolbox () {
     return `
-<category name="%{BKY_SERVO_CATEGORY}" id="SERVO_CATEGORY" colour="#FF6F00" secondaryColour="#FF6F00" iconURI="">
+<category name="%{BKY_SERVO_CATEGORY}" id="SERVO_CATEGORY" colour="#FF6F00" secondaryColour="#FF6F00">
     <block type="servo_write" id="servo_write">
         <value name="degree">
             <shadow type="math_angle">
