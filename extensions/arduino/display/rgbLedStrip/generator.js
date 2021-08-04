@@ -17,7 +17,7 @@ function addGenerator (Blockly) {
         const no = Blockly.Arduino.valueToCode(block, 'NO', Blockly.Arduino.ORDER_ATOMIC);
         const colour = Blockly.Arduino.valueToCode(block, 'COLOR', Blockly.Arduino.ORDER_ATOMIC).replace('#', '0x');
 
-        return `ledStrip.setPixelColor(${no}, ${colour});\n`;
+        return `ledStrip.setPixelColor(${no} - 1, ${colour});\n`;
     };
 
     Blockly.Arduino.rgbLedStrip_fill = function (block) {
@@ -25,7 +25,7 @@ function addGenerator (Blockly) {
         const count = Blockly.Arduino.valueToCode(block, 'COUNT', Blockly.Arduino.ORDER_ATOMIC);
         const colour = Blockly.Arduino.valueToCode(block, 'COLOR', Blockly.Arduino.ORDER_ATOMIC).replace('#', '0x');
 
-        return `ledStrip.fill(${colour}, ${first}, ${count});\n`;
+        return `ledStrip.fill(${colour}, ${first} - 1, ${count});\n`;
     };
 
     Blockly.Arduino.rgbLedStrip_color = function (block) {
