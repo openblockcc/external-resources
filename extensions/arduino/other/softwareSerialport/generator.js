@@ -16,7 +16,13 @@ function addGenerator (Blockly) {
     Blockly.Arduino.softwareSerial_print = function (block) {
         const no = Blockly.Arduino.valueToCode(block, 'NO', Blockly.Arduino.ORDER_ATOMIC);
         const data = Blockly.Arduino.valueToCode(block, 'DATA', Blockly.Arduino.ORDER_ATOMIC);
-        return `softwareSerial_${no}.println(${data});\n`;
+        const eol = this.getFieldValue('EOL');
+
+        if (eol === '0') {
+
+            return `softwareSerial_${no}.println(${data});\n`;
+        }
+        return `softwareSerial_${no}.print(${data});\n`;
     };
 
     Blockly.Arduino.softwareSerial_available = function (block) {
