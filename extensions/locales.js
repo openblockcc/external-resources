@@ -28,6 +28,9 @@ module.exports = {
         'QDPRobot_C02.description': 'QDP robot C02.',
         'cooperativeScheduler.name': 'Cooperative Scheduler',
         'cooperativeScheduler.description': 'Allow Arduino run multiple tasks.',
+        'insertSourceCode.name': 'Insert Source Code',
+        'insertSourceCode.description': 'Insert the source code directly into the blocks, so that professional ' +
+        'users can realize some more advanced functions.',
         'mfrc522.name': 'MFRC-522 Module',
         'mfrc522.description': '13.56MHz radio frequency identification module using spi interface.',
         'pca9685.name': 'PCA9685 Module',
@@ -83,6 +86,8 @@ module.exports = {
         'QDPRobot_C02.description': '齐护机器人 C02。',
         'cooperativeScheduler.name': '多任务调度器',
         'cooperativeScheduler.description': '使 Arduino 可以运行多个任务。',
+        'insertSourceCode.name': '插入源代码',
+        'insertSourceCode.description': '将源代码直接插入积木中，让专业用户可以实现一些更高级的功能。',
         'mfrc522.name': 'MFRC-522 模块',
         'mfrc522.description': '使用 SPI 接口的 13.56MHz 射频识别模块。',
         'pca9685.name': 'PCA9685 模块',
