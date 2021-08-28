@@ -6,8 +6,7 @@ const ironKit = formatMessage => ({
     iconURL: 'asset/ironKit.png',
     description: formatMessage({
         id: 'ironKit.description',
-        default: 'Yiqichuang iron kit robot.',
-        description: 'Description for the YQC iron kit device'
+        default: 'Yiqichuang iron kit robot.'
     }),
     disabled: false,
     bluetoothRequired: false,

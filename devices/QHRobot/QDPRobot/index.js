@@ -6,8 +6,7 @@ const QDPRobot = formatMessage => ({
     iconURL: 'asset/QDPRobot.png',
     description: formatMessage({
         id: 'QDPRobot.description',
-        default: 'QDP robot.',
-        description: 'Description for the QDP robot device'
+        default: 'QDP robot.'
     }),
     disabled: false,
     bluetoothRequired: false,
