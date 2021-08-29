@@ -19,7 +19,7 @@ function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         LCD_CATEGORY: '1602 LCD',
         LCD_INIT: '初始化 lcd I2C 地址 %1',
-        LCD_SETCURSORPOSITION: 'set lcd 光标位置 x: %1 y: %2',
+        LCD_SETCURSORPOSITION: '设置 lcd 光标位置 x: %1 y: %2',
         LCD_PRINT: 'lcd 打印 %1',
         LCD_CLEAR: '清空 lcd',
         LCD_SETBACKLIGHT: '设置 lcd 背光 %1',
