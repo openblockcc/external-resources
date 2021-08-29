@@ -122,7 +122,7 @@ void ShiftDisplay::modifyBufferDot(int index, bool dot) {
 void ShiftDisplay::encodeCharacters(int size, const char input[], byte output[], int dotIndex = -1) {
 	for (int i = 0; i < size; i++) {
 		char c = input[i];
-		
+
 		if (c >= '0' && c <= '9')
 			output[i] = NUMBERS[c - '0'];
 		else if (c >= 'a' && c <= 'z')
@@ -134,13 +134,13 @@ void ShiftDisplay::encodeCharacters(int size, const char input[], byte output[],
 		else // space or invalid
 			output[i] = BLANK;
 	}
-	
+
 	if (dotIndex != -1)
 		bitWrite(output[dotIndex], 0, 1);
 }
 
 int ShiftDisplay::formatCharacters(int inSize, const char input[], int outSize, char output[], char alignment, int decimalPlaces = -1) {
-	
+
 	// index of character virtual borders
 	int left; // lowest index
 	int right; // highest index
@@ -159,7 +159,7 @@ int ShiftDisplay::formatCharacters(int inSize, const char input[], int outSize, 
 		left = (outSize - inSize) / 2;
 		right = left + inSize - 1;
 	}
-	
+
 	// fill output array with empty space or characters
 	for (int i = 0; i < left; i++) // before characters
 		output[i] = ' ';
@@ -280,17 +280,17 @@ void ShiftDisplay::setAt(int section, long value, char alignment) {
 
 void ShiftDisplay::setAt(int section, double valueReal, int decimalPlaces, char alignment) {
 	if (section >= 0 && section < _sectionCount) { // valid section
-		
+
 		// if no decimal places, call long function instead
 		if (decimalPlaces == 0) {
 			long value = round(valueReal);
 			setAt(section, value, alignment);
 			return;
 		}
-	
+
 		 // calculate value with specified decimal places as integer (eg 1.236, 2 = 124)
 		long value = round(valueReal * pow(10, decimalPlaces));
-	
+
 		int valueSize = countCharacters(valueReal) + decimalPlaces;
 		char originalCharacters[valueSize];
 		getCharacters(value, valueSize, originalCharacters);
@@ -333,7 +333,7 @@ void ShiftDisplay::setAt(int section, const char value[], char alignment) {
 
 void ShiftDisplay::setAt(int section, const String &value, char alignment) {
 	if (section >= 0 && section < _sectionCount) { // valid section
-	
+
 		// convert String to char array manually for better support between Arduino cores
 		int size = 0;
 		while (value[size] != '\0')
@@ -342,7 +342,7 @@ void ShiftDisplay::setAt(int section, const String &value, char alignment) {
 		for (int i = 0; i < size; i++)
 			str[i] = value[i];
 		str[size] = '\0';
-	
+
 		setAt(section, str, alignment); // call char array function
 	}
 }
@@ -390,7 +390,10 @@ void ShiftDisplay::show() {
 }
 
 void ShiftDisplay::show(unsigned long time) {
-	unsigned long end = millis() + time - (POV * _displaySize); // start + total - last iteration
+    if(time < POV * _displaySize){
+        time = POV * _displaySize;
+    }
+    unsigned long end = millis() + time - (POV * _displaySize); // start + total - last iteration
 	while (millis() <= end)
 		showDisplay();
 	clearDisplay();
