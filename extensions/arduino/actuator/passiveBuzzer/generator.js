@@ -16,7 +16,7 @@ function addGenerator (Blockly) {
         const freq = this.getFieldValue('FREQ');
         const time = this.getFieldValue('TIME');
 
-        return `my_buzzer.tone(${freq}, 1 * 1000 * beatTime);\n`;
+        return `my_buzzer.tone(${freq}, ${time} * 1000 * beatTime);\n`;
     };
 
     Blockly.Arduino.passiveBuzzer_setTempo = function (block) {
