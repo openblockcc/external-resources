@@ -44,7 +44,6 @@ function addBlocks (Blockly) {
                         name: 'BRT'
                     }
                 ],
-                tooltip: '0 ~ 7',
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']
