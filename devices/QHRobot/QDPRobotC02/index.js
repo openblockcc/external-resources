@@ -2,7 +2,7 @@ const QDPRobotC02 = formatMessage => ({
     name: 'QDP RobotC02',
     deviceId: 'QDPRobotC02_arduinoEsp32',
     manufactor: 'QDP Robot',
-    leanMore: 'https://qdprobot.taobao.com',
+    learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobotC02.png',
     description: formatMessage({
         id: 'QDPRobotC02.description',

@@ -2,7 +2,7 @@ const ironKit = formatMessage => ({
     name: 'IronKit',
     deviceId: 'ironKit_arduinoUno',
     manufactor: 'YQC Robot',
-    leanMore: 'https://item.taobao.com/item.htm?id=628120335101',
+    learnMore: 'https://item.taobao.com/item.htm?id=628120335101',
     iconURL: 'asset/ironKit.png',
     description: formatMessage({
         id: 'ironKit.description',
