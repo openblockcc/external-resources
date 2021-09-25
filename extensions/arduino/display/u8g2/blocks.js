@@ -409,24 +409,24 @@ function addBlocks (Blockly) {
                         name: 'FONT',
                         options: [
                             // en only font
-                            [Blockly.Msg.U8G2_FONT_4x6, 'u8g2_font_4x6_mf'], // 实际字宽度为 3x5 前面的宽度是算了上下间隔的
-                            [Blockly.Msg.U8G2_FONT_5x7, 'u8g2_font_5x7_mf'],
-                            [Blockly.Msg.U8G2_FONT_5x7, 'u8g2_font_5x8_mf'],
-                            [Blockly.Msg.U8G2_FONT_6x10, 'u8g2_font_6x10_mf'],
-                            [Blockly.Msg.U8G2_FONT_6x10, 'u8g2_font_6x12_mf'],
-                            [Blockly.Msg.U8G2_FONT_6x10, 'u8g2_font_6x13_mf'],
-                            [Blockly.Msg.U8G2_FONT_7x13, 'u8g2_font_7x13_mf'],
-                            [Blockly.Msg.U8G2_FONT_7x13, 'u8g2_font_7x14_mf'],
-                            [Blockly.Msg.U8G2_FONT_8x13, 'u8g2_font_8x13_mf'],
-                            [Blockly.Msg.U8G2_FONT_9x15, 'u8g2_font_9x15_mf'],
-                            [Blockly.Msg.U8G2_FONT_9x15, 'u8g2_font_9x18_mf'],
-                            [Blockly.Msg.U8G2_FONT_10x20, 'u8g2_font_10x20_mf'],
+                            [Blockly.Msg.U8G2_FONT_4X6, 'u8g2_font_4x6_mf'],
+                            [Blockly.Msg.U8G2_FONT_5X7, 'u8g2_font_5x7_mf'],
+                            [Blockly.Msg.U8G2_FONT_5X8, 'u8g2_font_5x8_mf'],
+                            [Blockly.Msg.U8G2_FONT_6X10, 'u8g2_font_6x10_mf'],
+                            [Blockly.Msg.U8G2_FONT_6X12, 'u8g2_font_6x12_mf'],
+                            [Blockly.Msg.U8G2_FONT_6X13, 'u8g2_font_6x13_mf'],
+                            [Blockly.Msg.U8G2_FONT_7X13, 'u8g2_font_7x13_mf'],
+                            [Blockly.Msg.U8G2_FONT_7X14, 'u8g2_font_7x14_mf'],
+                            [Blockly.Msg.U8G2_FONT_8X13, 'u8g2_font_8x13_mf'],
+                            [Blockly.Msg.U8G2_FONT_9X15, 'u8g2_font_9x15_mf'],
+                            [Blockly.Msg.U8G2_FONT_9X18, 'u8g2_font_9x18_mf'],
+                            [Blockly.Msg.U8G2_FONT_10X20, 'u8g2_font_10x20_mf'],
                             // zh support font
-                            [Blockly.Msg.U8G2_FONT_12C, 'u8g2_font_wqy12_t_chinese1'], // 实际字宽度为 11x11
-                            [Blockly.Msg.U8G2_FONT_13C, 'u8g2_font_wqy13_t_chinese1'],
-                            [Blockly.Msg.U8G2_FONT_14C, 'u8g2_font_wqy14_t_chinese1'],
-                            [Blockly.Msg.U8G2_FONT_15C, 'u8g2_font_wqy15_t_chinese1'],
-                            [Blockly.Msg.U8G2_FONT_16C, 'u8g2_font_wqy16_t_chinese1']
+                            [Blockly.Msg.U8G2_FONT_11x11C, 'u8g2_font_wqy12_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_13x13C, 'u8g2_font_wqy13_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_14x14C, 'u8g2_font_wqy14_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_15X15C, 'u8g2_font_wqy15_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_16X16C, 'u8g2_font_wqy16_t_chinese2']
                         ]
                     },
                     {
@@ -440,6 +440,7 @@ function addBlocks (Blockly) {
                         ]
                     }
                 ],
+                tooltip: Blockly.Msg.U8G2_SETFONT_TOOLTIP,
                 colour: colour,
                 secondaryColour: secondaryColour,
                 extensions: ['shape_statement']

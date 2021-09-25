@@ -140,8 +140,7 @@ function addGenerator (Blockly) {
         const font = block.getFieldValue('FONT');
         const dir = block.getFieldValue('DIR');
 
-        if (font === 'u8g2_font_wqy13_t_gb2312' || font === 'u8g2_font_unifont_t_chinese1' ||
-            font === 'u8g2_font_wqy15_t_gb2312') {
+        if (font.indexOf('chinese') !== -1) {
             Blockly.Arduino.setups_.u8g2_setFont = `u8g2.enableUTF8Print();`;
         }
 
