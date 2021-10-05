@@ -19,6 +19,7 @@ const ironKit = formatMessage => ({
     connectionIconURL: 'asset/ironKit-illustration.svg',
     connectionSmallIconURL: 'asset/ironKit-small.svg',
     programMode: ['realtime', 'upload'],
+    defaultProgramMode: 'upload',
     programLanguage: ['block', 'cpp'],
     tags: ['arduino', 'kit'],
     deviceExtensions: ['ironKit', 'apds9960'],
