@@ -20,6 +20,7 @@ const passiveBuzzer = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     library: 'lib',
+    official: true,
     tags: ['actuator'],
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });

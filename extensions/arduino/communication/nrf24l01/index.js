@@ -16,6 +16,7 @@ const nrf24l01 = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     library: 'lib',
+    official: true,
     tags: ['communication'],
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });

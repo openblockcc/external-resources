@@ -16,6 +16,7 @@ const tcs3200 = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     library: 'lib',
+    official: true,
     tags: ['sensor'],
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });

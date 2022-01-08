@@ -18,6 +18,7 @@ const softwareSerial = formatMessage => ({
     generator: 'generator.js',
     toolbox: 'toolbox.js',
     msg: 'msg.js',
+    official: true,
     tags: ['other'],
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
