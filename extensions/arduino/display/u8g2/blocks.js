@@ -422,9 +422,9 @@ function addBlocks (Blockly) {
                             [Blockly.Msg.U8G2_FONT_9X18, 'u8g2_font_9x18_mf'],
                             [Blockly.Msg.U8G2_FONT_10X20, 'u8g2_font_10x20_mf'],
                             // zh support font
-                            [Blockly.Msg.U8G2_FONT_11x11C, 'u8g2_font_wqy12_t_chinese2'],
-                            [Blockly.Msg.U8G2_FONT_13x13C, 'u8g2_font_wqy13_t_chinese2'],
-                            [Blockly.Msg.U8G2_FONT_14x14C, 'u8g2_font_wqy14_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_11X11C, 'u8g2_font_wqy12_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_13X13C, 'u8g2_font_wqy13_t_chinese2'],
+                            [Blockly.Msg.U8G2_FONT_14X14C, 'u8g2_font_wqy14_t_chinese2'],
                             [Blockly.Msg.U8G2_FONT_15X15C, 'u8g2_font_wqy15_t_chinese2'],
                             [Blockly.Msg.U8G2_FONT_16X16C, 'u8g2_font_wqy16_t_chinese2']
                         ]
