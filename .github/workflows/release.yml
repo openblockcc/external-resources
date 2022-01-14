@@ -1,0 +1,89 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+    paths-ignore:
+      - 'README.md'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - run: npm i -g openblock-resource
+
+      - name: Sync translations
+        run: |
+          i18n-extract
+          i18n-push
+          i18n-update
+
+      - name: Pro-process resources
+        run: |
+          i18n-extract
+          opt-size
+          gen-config --version=${{ github.ref_name }} --repo=openblockcc/external-resources --cdn=https://cdn.openblock.cc/
+          gen-hash
+
+      - name: Get version
+        id: get-version
+        run: |
+          version=`echo "${{ github.ref_name }}" | sed -r 's/[v]+//g'`
+          echo '::set-output name=VERSION::$version'
+
+      - name: Zip resources
+        uses: vimtor/action-zip@v1
+        with:
+            files: ./
+            dest: external-resources.zip
+
+      - name: Checksum
+        run: sha256sum external-resources-*.zip >> checksums.txt
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: OpenBlock External Resources ${{ github.ref_name }}
+          body: |
+            - **New feature**
+
+                1. First Change
+                2. Second Change
+
+            - **Fix bug**
+
+                1. First Change
+                2. Second Change
+          draft: true
+          prerelease: false
+
+      # Upload zip
+      - uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: external-resources.zip
+          asset_name: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
+          asset_content_type: application/zip
+
+      # Upload checksum
+      - uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: checksums.txt
+          asset_name: ${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
+          asset_content_type: text/plain
