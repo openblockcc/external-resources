@@ -1,0 +1,6 @@
+{
+    "DS18B20_CATEGORY": "DS18B20",
+    "DS18B20_INIT": "init ds18b20 pin %1 quantity %2",
+    "DS18B20_READALLTEMPERATURES": "ds18b20 read all temperatures",
+    "DS18B20_GETTEMPERATURE": "ds18b20 %1 temperatures %2"
+}

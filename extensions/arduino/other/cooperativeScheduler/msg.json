@@ -1,0 +1,6 @@
+{
+    "COOPERATIVESCHEDULER_CATEGORY": "Cooperative scheduler",
+    "COOPERATIVESCHEDULER_START": "start cooperative scheduler",
+    "COOPERATIVESCHEDULER_SETUP": "task %1 setup",
+    "COOPERATIVESCHEDULER_SLEEP": "task delay %1 ms"
+}

@@ -1,0 +1,10 @@
+{
+    "RGBLEDSTRIP_CATEGORY": "RGB LED Strip",
+    "RGBLEDSTRIP_INIT": "init rgb led strip length %1 pin %2",
+    "RGBLEDSTRIP_SETPIXELCOLOR": "rgb led set pixel %1 color %2",
+    "RGBLEDSTRIP_FILL": "rgb led fill from pixel %1 count %2 with color %3",
+    "RGBLEDSTRIP_COLOR": "rgb led strip color R %1 G %2 B %3",
+    "RGBLEDSTRIP_SETBRIGHTNESS": "set rgb led brightness %1",
+    "RGBLEDSTRIP_CLEAR": "clear all rgb led",
+    "RGBLEDSTRIP_SHOW": "refresh rgb led display"
+}

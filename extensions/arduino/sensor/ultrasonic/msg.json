@@ -1,0 +1,4 @@
+{
+    "ULTRASONIC_CATEGORY": "Ultrasonic",
+    "ULTRASONIC_READ_DISTANCE": "ultrasonic sensor pin TRIG %1 ECHO %2 read distance %3"
+}

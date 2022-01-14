@@ -1,0 +1,5 @@
+{
+    "MAX6675_CATEGORY": "MAX6675",
+    "MAX6675_INIT": "init max6675 pin DO %1 CLK %2 CS %3",
+    "MAX6675_READTEMPERATURE": "max6675 read temperature %1"
+}
