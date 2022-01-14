@@ -1,0 +1,12 @@
+{
+    "en": {
+        "QDPRobot.description": "QDP robot.",
+        "QDPRobotC02.description": "QDP robot C02.",
+        "ironKit.description": "Yiqichuang iron kit robot."
+    },
+    "zh-cn": {
+        "QDPRobot.description": "齐护机器人。",
+        "QDPRobotC02.description": "齐护机器人 C02。",
+        "ironKit.description": "意启创金属套件机器人。"
+    }
+};
