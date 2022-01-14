@@ -21,6 +21,7 @@ jobs:
 
       - name: Sync translations
         run: |
+          export TX_TOKEN=${{ secrets.TX_TOKEN }}
           i18n-extract
           i18n-push
           i18n-update
@@ -35,14 +36,14 @@ jobs:
       - name: Get version
         id: get-version
         run: |
-          version=`echo "${{ github.ref_name }}" | sed -r 's/[v]+//g'`
-          echo '::set-output name=VERSION::$version'
+          version=`echo ${{ github.ref_name }} | sed -r 's/[v]+//g'`
+          echo ::set-output name=VERSION::$version
 
       - name: Zip resources
         uses: vimtor/action-zip@v1
         with:
             files: ./
-            dest: external-resources.zip
+            dest: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
 
       - name: Checksum
         run: sha256sum external-resources-*.zip >> checksums.txt
@@ -74,7 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: external-resources.zip
+          asset_path: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
           asset_name: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
           asset_content_type: application/zip
 
